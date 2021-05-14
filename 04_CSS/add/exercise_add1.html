@@ -12,35 +12,33 @@
             border-bottom-left-radius: 5px;
             border-color: grey;            
         }
-        a[target]{
-            background-image: url('../pic/extref.png');
-            background-repeat: no-repeat;
-            background-position:left;
-            padding-left: 20px;         
+        a[target]::before{
+            color: red;
+            content: url('../pic/extref.png');                
         }
         li{
-            list-style: none;
-            background-image: url('../pic/logo-list.jpg');
-            background-repeat: no-repeat;
-            padding-left: 20px;     
+           list-style: none; 
         }
-        p a[href*="document.doc"]{
-            background-image: url('../pic/logo-doc.jpg');
-            background-repeat: no-repeat;
-            background-position: right;
-            padding-right: 20px;
+        li::before{            
+            content: url('../pic/logo-list.jpg');        
+      }
+        p a[href*="document.doc"]::after{
+            content: url('../pic/logo-doc.jpg');            
         }
-        p a[href*="document.pdf"]{
-            background-image: url('../pic/logo-pdf.png');
-            background-repeat: no-repeat;
-            background-position: right;
-            padding-right: 20px;
+        p a[href*="document.pdf"]::after{
+            content: url('../pic/logo-pdf.png');           
         }
-        p a[href*="document.zip"]{
-            background-image: url('../pic/logo-zip.gif');
-            background-repeat: no-repeat;
-            background-position: right;
-            padding-right: 20px;
+        p a[href*="document.zip"]::after{
+            content: url('../pic/logo-zip.gif');            
+        }
+        li a[href*="document.doc"]:hover::after{
+            content: url('../pic/logo-doc.jpg');            
+        }
+        li a[href*="document.pdf"]:hover::after{
+            content: url('../pic/logo-pdf.png');           
+        }
+        li a[href*="document.zip"]:hover::after{
+            content: url('../pic/logo-zip.gif');           
         }
 			
 		</style>	
